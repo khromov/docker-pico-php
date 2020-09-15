@@ -18,7 +18,6 @@ jobs:
         accessToken: ${{ github.token }}
   build-chonky:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/chonky-version'
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
