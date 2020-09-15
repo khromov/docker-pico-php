@@ -18,7 +18,7 @@ docker pull khromov/pico-php:latest
 
 #### chonky
 
-Alpine + PHP + Popular PHP extensions for running Laravel, WordPress and more. 🍔 Image size: 26 MB
+Alpine + PHP + Composer + WP-CLI + Popular PHP extensions for running Laravel, WordPress and more. 🍔 Image size: 26 MB
 
 ```
 docker pull khromov/pico-php:chonky
