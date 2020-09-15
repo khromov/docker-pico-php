@@ -2,6 +2,8 @@
 
 Built image size: 14.8 MB (!)
 
+Starts with `4` threads by default, but you can configure this by editing `docker-compose.yml` directly, or by creating a `docker-compose.override.yml` file and setting the environment `PHP_CLI_SERVER_WORKERS` appropriately.
+
 ### Run with docker-compose
 
 ```

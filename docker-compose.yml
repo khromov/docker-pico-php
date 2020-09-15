@@ -8,4 +8,4 @@ services:
      ports:
        - "4000:4000"
      environment:
-        PHP_CLI_SERVER_WORKERS : 8
+        PHP_CLI_SERVER_WORKERS : 4
