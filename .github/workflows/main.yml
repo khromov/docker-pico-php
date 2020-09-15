@@ -1,9 +1,10 @@
-name: CI
+name: Build Docker images
 
 on:
   push:
     branches:
       - master
+      - chonky-version
 
 jobs:
   build:
@@ -15,3 +16,16 @@ jobs:
       uses: matootie/github-docker@v3.1.0
       with:
         accessToken: ${{ github.token }}
+  build-chonky:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/chonky-version'
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        ref: chonky-version
+    - name: Publish Docker Image
+      uses: matootie/github-docker@v3.1.0
+      with:
+        accessToken: ${{ github.token }}
+        tag: chonky
