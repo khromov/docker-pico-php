@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+   php:
+     volumes:
+        - ./webroot:/var/www/
+     build: .
+     ports:
+       - "4000:4000"
+     environment:
+        PHP_CLI_SERVER_WORKERS : 8
