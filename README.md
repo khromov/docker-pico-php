@@ -1,8 +1,28 @@
-# Smallest PHP 7.4 container using multi-threaded PHP Built-in web server
+# A tiny PHP 7.4 container using multi-threaded PHP Built-in web server
 
-Built image size: 14.8 MB (!)
+This is a tiny container using the built-in PHP web server and utilizing its multi-thread support introduced in PHP 7.4.
 
 Starts with `4` threads by default, but you can configure this by editing `docker-compose.yml` directly, or by creating a `docker-compose.override.yml` file and setting the environment `PHP_CLI_SERVER_WORKERS` appropriately.
+
+### Available images
+
+This image comes in two flavors:
+
+#### latest
+
+Alpine + PHP (No extensions). 💪 Image size: 5.5 MB 
+
+```
+docker pull khromov/pico-php:latest
+```
+
+#### chonky
+
+Alpine + PHP + Popular PHP extensions for running Laravel, WordPress and more. 🍔 Image size: 26 MB
+
+```
+docker pull khromov/pico-php:chonky
+```
 
 #### Security notice
 
@@ -41,7 +61,7 @@ Now you can visit http://localhost:4000/ to see your build in action!
 Either start from existing image and add your project files and dependencies:
 
 ```
-FROM docker.pkg.github.com/khromov/docker-pico-php/docker-pico-php:latest
+FROM khromov/pico-php:latest
 # ...your changes.
 ```
 
