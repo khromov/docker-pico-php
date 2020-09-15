@@ -33,7 +33,8 @@ Now you can visit http://localhost:4000/ to see your build in action!
 Either start from existing image and add your project files and dependencies:
 
 ```
-FROM ...
+FROM docker.pkg.github.com/khromov/docker-pico-php/docker-pico-php:latest
+# ...your changes.
 ```
 
 Or fork this image and use the included GitHub workflow to publish it yourself.
