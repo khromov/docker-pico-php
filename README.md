@@ -24,6 +24,14 @@ Alpine + PHP + Composer + WP-CLI + Popular PHP extensions for running Laravel, W
 docker pull khromov/pico-php:chonky
 ```
 
+### Run with Docker and mount local folder inside container
+
+```
+docker run -p 4000:4000 -v /Users/admin/Documents/webroot:/var/www/ khromov/pico-php:latest
+```
+
+Server will be available at http://localhost:4000/
+
 #### Security notice
 
 According to the [PHP Documentation](), the built-in server _"...is not intended to be a full-featured web server. It should not be used on a public network."_ 
@@ -31,6 +39,10 @@ According to the [PHP Documentation](), the built-in server _"...is not intended
 There does however not seem to be any specific security issues related to the built-in server, and since it's running in an isolated Docker container, it could still be suitable in certain situations (behind basic auth, on an intranet, non-public websites, demo sites etc.)
 
 ### Run with docker-compose
+
+If you want to use this as a local PHP environment, start by checking out the [GitHub repo](https://github.com/khromov/docker-pico-php)
+
+Start the container using Docker Compose:
 
 ```
 docker-compose up
