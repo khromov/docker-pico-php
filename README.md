@@ -34,9 +34,9 @@ Server will be available at http://localhost:4000/
 
 #### Security notice
 
-According to the [PHP Documentation](), the built-in server _"...is not intended to be a full-featured web server. It should not be used on a public network."_ 
+According to the [PHP Documentation](https://www.php.net/manual/en/features.commandline.webserver.php), the built-in server _"...is not intended to be a full-featured web server. It should not be used on a public network."_ 
 
-There does however not seem to be any specific security issues related to the built-in server, and since it's running in an isolated Docker container, it could still be suitable in certain situations (behind basic auth, on an intranet, non-public websites, demo sites etc.)
+It is therefore recommended to use this image either as a development environment or behind additional levels of security (Behind basic auth, on an intranet, etc.)
 
 ### Run with docker-compose
 
